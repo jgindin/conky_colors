@@ -25,7 +25,7 @@ if os.path.ismount("/opt"):
 # folder in /media
 for device in os.listdir("/media/"):
         if (not device.startswith("cdrom")) and (os.path.ismount('/media/'+device)):
-                print ("${voffset -12}${color0}${font Poky:size=15}y${font}${color}${offset 6}${voffset -7}"+device.capitalize()+": ${font Ubuntu:style=Bold:size=8}${color1}${fs_free_perc /media/"+device+"}%${color}${font}\n")
+                print ("${voffset -12}${color0}${font Poky:size=15}y${font}${color}${offset 6}${voffset -7}"+device.capitalize()+": ${font Ubuntu:style=Bold:size=8}${color1}${fs_free_perc /media/"+device+"}% free${color}${font}\n")
                 print ("${voffset -12}${color0}${fs_bar 4,20 /media/"+device+"}${color}${offset 8}${voffset -2}F: ${font Ubuntu:style=Bold:size=8}${color2}${fs_free /media/"+device+"}${color}${font} U: ${font Ubuntu:style=Bold:size=8}${color2}${fs_used /media/"+device+"}${color}${font}\n")
 print ("${voffset -12}")
 
