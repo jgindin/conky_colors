@@ -34,7 +34,7 @@ void help() {
 	printf("\t--battery-value=<number> - Change battery device number </proc/acpi/battery>\n");
 	printf("\t--updates - Show updates for Debian/Ubuntu\n");
 	printf("\t--proc=<number> - Enable processes [Max = 10]\n");
-	printf("\t--clock=<default|classic|slim|modern|lucky|digital|off>\n");
+	printf("\t--clock=<default|modern|digital|off>\n");
 	printf("\t--nodata - disable Data\n");
 	printf("\t--calendar - Enable calendar\n");
 	printf("\t--calendarm - Enable calendar with monday as first day\n");
@@ -83,13 +83,13 @@ void help() {
 	printf("\t--slim - Enable slim-conky mode.\n");
 	printf("\t--w=<width> - Set your screen width\n");
 	printf("\t--h=<height> - Set your screen height\n");
-	printf("\t--nobg - remove the background\n");
+	printf("\t--nobg - Remove background\n");
 	printf("\t--posfix=<number> - fix ring position\n");
 	printf("\t--weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]\n");
 	printf("\t--unit=<C|F>- Force output temperature either in Celius or Fahrenheit\n");
 	printf("\t-------------- SLS MODE --------------\n");
 	printf("\t--sls - Enable SLS-conky mode.\n");
-	printf("\t--nobg - remove the background\n");
+	printf("\t--nobg - Remove background\n");
 	printf("\t--weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]\n");
 	printf("\t--user=<username> - Type your gmail username\n");
 	printf("\t--passwd=<password> - Type your gmail password\n");

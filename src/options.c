@@ -95,7 +95,7 @@ int options (int argc, char *argv[]) {
 			OR_OPTION("italian", value) OR_OPTION("it", value) OR_OPTION("polish", value) OR_OPTION("pl", value)
 			OR_OPTION("estonian", value) OR_OPTION("et", value) OR_OPTION("russian", value) OR_OPTION("ru", value)
 			OR_OPTION("french", value) OR_OPTION("fr", value) OR_OPTION("bulgarian", value) OR_OPTION("bg", value)
-			OR_OPTION("ukrainian", value) OR_OPTION_END("uk", value)
+			OR_OPTION("ukrainian", value) OR_OPTION("uk", value) OR_OPTION("czech", value) OR_OPTION_END("cs", value)
 				snprintf(language, 31, "%s", value);
 			else
 			{
@@ -144,24 +144,18 @@ int options (int argc, char *argv[]) {
 		{
 			OPTION("default", value)
 				clocktype = 0;
-			else OPTION("classic", value)
-				clocktype = 1;
-			else OPTION("slim", value)
-				clocktype = 2;
 			else OPTION("modern", value)
-				clocktype = 3;
-			else OPTION("lucky", value)
-				clocktype = 4;
+				clocktype = 1;
 			else OPTION("digital", value)
-				clocktype = 5;
+				clocktype = 2;
 			else OPTION("off", value)
-				clocktype = 6;
+				clocktype = 3;
 			else OPTION("cairo", value)
-				clocktype = 7;
+				clocktype = 4;
 			else OPTION("bigcairo", value)
-				clocktype = 8;
+				clocktype = 5;
 			else OPTION("ring", value)
-				clocktype = 8;
+				clocktype = 6;
 			else
 			{
 				printf("ERRO: CLOCK option unavaliable\n");
@@ -351,7 +345,7 @@ int options (int argc, char *argv[]) {
 		}
 		else OPTION("--gentoo", key)
 		{
-			sprintf(logo_letter, "g");
+			sprintf(logo_letter, "o");
 			logo = True;
 		}
 		else OPTION("--xfce", key)
@@ -361,7 +355,7 @@ int options (int argc, char *argv[]) {
 		}
 		else OPTION("--gnome", key)
 		{
-			sprintf(logo_letter, "e");
+			sprintf(logo_letter, "g");
 			logo = True;
 		}
 		else OPTION("--kde", key)
@@ -443,6 +437,7 @@ int set_default_values()
 	strcpy(user,"<user>");
 	strcpy(password,"<password>");
 	strcpy(weather_code,"BRXX0043");
+	strcpy(logo_letter,"l");
 
 	strcpy(defaultcolor, "212526");
 	strcpy(color0, "E6E6E6");

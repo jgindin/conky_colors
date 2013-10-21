@@ -56,14 +56,14 @@ void conkyrc_slim () {
 	fprintf(fp,"own_window_class Conky\n");
 	fprintf(fp,"own_window yes\n");
 	fprintf(fp,"own_window_type normal\n");
+	fprintf(fp,"own_window_transparent yes\n");
 	fprintf(fp,"own_window_argb_visual yes\n");
 	fprintf(fp,"own_window_argb_value %d\n", argb_value);
-	fprintf(fp,"own_window_transparent yes\n");
 	fprintf(fp,"own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager\n");
 	fprintf(fp,"\n");
 	fprintf(fp,"alignment top_left\n");
 	fprintf(fp,"gap_x 0\n");
-	fprintf(fp,"gap_y %.0f\n", board_height/1.5);
+	fprintf(fp,"gap_y %.0f\n", board_height/1.15);
 	fprintf(fp,"minimum_size %.0f %d\n", board_width, 50);
 	fprintf(fp,"maximum_width %.0f %d\n", board_width, 50);
 	fprintf(fp,"\n");

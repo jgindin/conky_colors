@@ -60,14 +60,14 @@ void conkyrc_board () {
 	fprintf(fp,"own_window_class Conky\n");
 	fprintf(fp,"own_window yes\n");
 	fprintf(fp,"own_window_type desktop\n");
+	fprintf(fp,"own_window_transparent yes\n");
 	fprintf(fp,"own_window_argb_visual yes\n");
 	fprintf(fp,"own_window_argb_value %d\n", argb_value);
-	fprintf(fp,"own_window_transparent yes\n");
 	fprintf(fp,"own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager\n");
 	fprintf(fp,"\n");
 	fprintf(fp,"alignment top_left\n");
 	fprintf(fp,"gap_x 0\n");
-	fprintf(fp,"gap_y %.0f\n", board_height/4);
+	fprintf(fp,"gap_y 0\n");
 	fprintf(fp,"minimum_size %.0f %.0f\n", board_width, board_height);
 	fprintf(fp,"maximum_width %.0f %.0f\n", board_width, board_height);
 	fprintf(fp,"\n");
