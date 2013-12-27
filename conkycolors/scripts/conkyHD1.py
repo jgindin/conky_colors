@@ -2,7 +2,7 @@
 from os.path import normpath, basename, ismount
 import subprocess
 
-devices = subprocess.Popen(["lsblk | awk '{print $7}' | grep /"], shell=True, stdout=subprocess.PIPE)
+devices = subprocess.Popen(["lsblk | awk '{print $7}' | grep / | sort"], shell=True, stdout=subprocess.PIPE)
 
 print ("${voffset 4}")
 
