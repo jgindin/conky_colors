@@ -24,7 +24,7 @@ function displayNetwork() {
 
 
 
-avail=`ifconfig -s | tail -3 | awk '{print \$1}'`
+avail=`ifconfig -s | tail -n +2 | awk '{print \$1}'`
 for iface in $avail; do
   type_prefix=${iface:0:1}
   if [ $type_prefix == 'w' ]; then
