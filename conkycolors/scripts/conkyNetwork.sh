@@ -8,17 +8,17 @@ function displayNetwork() {
   local iface=$1
   local iface_type=$2
 
-	echo "\${color0}\${font Liberation Sans:style=Bold:size=8}${iface_type}\${color}\${font}"
-	echo "\${color0}\${font ConkyColors:size=16}s\${font}\${color}\${goto 32}\${voffset -12}Up: \${font Liberation Sans:style=Bold:size=8}\${color1}\${upspeed ${iface}}\${color}\${font} \${alignr}\${color2}\${upspeedgraph ${iface} 8,60 E07A1F CE5C00}\${color}"
-	echo "\${goto 32}Total: \${font Liberation Sans:style=Bold:size=8}\${color2}\${totalup ${iface}}\${color}\${font}"
-	echo "\${voffset 2}\${color0}\${font ConkyColors:size=16}t\${font}\${color}\${goto 32}\${voffset -12}Down: \${font Liberation Sans:style=Bold:size=8}\${color1}\${downspeed ${iface}}\${color}\${font} \${alignr}\${color2}\${downspeedgraph ${iface} 8,60 E07A1F CE5C00}\${color}"
-	echo "\${goto 32}Total: \${font Liberation Sans:style=Bold:size=8}\${color2}\${totaldown ${iface}}\${color}\${font}"
+	echo "\${color0}\${font Liberation Sans:style=Bold:size=14}${iface_type}\${color}\${font}"
+	echo "\${color0}\${font ConkyColors:size=16}s\${font}\${color}\${goto 32}\${voffset 0}Up: \${font Liberation Sans:style=Bold:size=14}\${color1}\${upspeed ${iface}}\${color}\${font} \${alignr}\${color2}\${upspeedgraph ${iface} 8,60 E07A1F CE5C00}\${color}"
+	echo "\${goto 32}Total: \${font Liberation Sans:style=Bold:size=14}\${color2}\${totalup ${iface}}\${color}\${font}"
+	echo "\${voffset 2}\${color0}\${font ConkyColors:size=16}t\${font}\${color}\${goto 32}\${voffset 0}Down: \${font Liberation Sans:style=Bold:size=14}\${color1}\${downspeed ${iface}}\${color}\${font} \${alignr}\${color2}\${downspeedgraph ${iface} 8,60 E07A1F CE5C00}\${color}"
+	echo "\${goto 32}Total: \${font Liberation Sans:style=Bold:size=14}\${color2}\${totaldown ${iface}}\${color}\${font}"
 
 	if [ $iface_type == "Wireless" ]; then
-	  echo "\${color0}\${font ConkyColors:size=16}j\${font}\${color}\${voffset -6}\${goto 32}Signal: \${font Liberation Sans:style=Bold:size=8}\${color1}\${wireless_link_qual_perc ${iface}}%\${color}\${font} \${alignr}\${color2}\${wireless_link_bar 8,60 ${iface}}\${color}"
+	  echo "\${color0}\${font ConkyColors:size=16}j\${font}\${color}\${voffset 0}\${goto 32}Signal: \${font Liberation Sans:style=Bold:size=14}\${color1}\${wireless_link_qual_perc ${iface}}%\${color}\${font} \${alignr}\${color2}\${wireless_link_bar 8,60 ${iface}}\${color}"
 	fi
 
-	echo "\${voffset 2}\${color0}\${font ConkyColors:size=16}B\${font}\${color}\${goto 32}\${voffset -6}Local IP: \${alignr}\${color2}\${addr ${iface}}\${color}"
+	echo "\${voffset 2}\${color0}\${font ConkyColors:size=16}B\${font}\${color}\${goto 32}\${voffset 0}Local IP: \${alignr}\${color2}\${addr ${iface}}\${color}"
 	echo "\${goto 32}Public IP: \${alignr}\${color2}\${execi 10800 /usr/share/conkycolors/bin/conkyIp}\${color}"
 }
 
