@@ -19,7 +19,9 @@ function displayNetwork() {
 	fi
 
 	echo "\${voffset 2}\${color0}\${font ConkyColors:size=16}B\${font}\${color}\${goto 32}\${voffset 0}Local IP: \${alignr}\${color2}\${addr ${iface}}\${color}"
-	echo "\${goto 32}Public IP: \${alignr}\${color2}\${execi 10800 /usr/share/conkycolors/bin/conkyIp}\${color}"
+
+	DIR=$(conky-colors --finddir=bin/conkyIp)
+	echo "\${goto 32}Public IP: \${alignr}\${color2}\${execi 10800 ${DIR}/bin/conkyIp}\${color}"
 }
 
 
